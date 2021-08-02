@@ -1,0 +1,12 @@
+.wrapper{
+    padding: 20px;
+    margin: 20px;
+    background-color: burlywood;
+    border: 10px solid black;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+.button{
+    margin: 20px;
+}
