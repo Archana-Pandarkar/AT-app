@@ -15,6 +15,8 @@ import { AboutComponent } from './routingfun/about/about.component';
 import { ContactComponent } from './routingfun/contact/contact.component';
 import { ProjectComponent } from './routingfun/project/project.component';
 import { RoutingfunComponent } from './routingfun/routingfun.component';
+import { PageNotFoundComponent } from './routingfun/page-not-found/page-not-found.component';
+import { Home1Component } from './routingfun/home1/home1.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { RoutingfunComponent } from './routingfun/routingfun.component';
     AboutComponent,
     ContactComponent,
     ProjectComponent,
-    RoutingfunComponent
+    RoutingfunComponent,
+    PageNotFoundComponent,
+    Home1Component
   ],
   imports: [
     BrowserModule,
