@@ -1,18 +1,32 @@
-<p>user-detail works!</p>
+<body>
+    <h1 style="">USER DETAILS</h1>
 <div class="form-wrapper">
     <div style="margin-left: 10px;">
-        Name:
-        <input type="text" name="name" id="name" [(ngModel)]="name">
+        Name: <input type="text" name="name" id="name" [(ngModel)]="name">
     </div>
     <div style="margin-left: 10px;">Age: <input type="number" name="age" id="age" [(ngModel)]="age"></div>
-    <div style="margin-left: 10px;"><button (click)="addUserToList()" >Add User :</button></div>
-
+    <div style="margin-left: 10px;" >
+        Gender:
+    <select name="gender" id="gender" class="user.gender"  [(ngModel)]="gender">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+    </select>
 </div>
-<h3>User List Here :</h3>
+<div style="margin-left: 10px;">
+    Address :
+<textarea name="address" id="address" cols="30" rows="10"  [(ngModel)]="address"></textarea>
+</div>
+    <div style="margin-left: 10px;"><button (click)="addUserToList()">Add User</button></div>
+</div>
+
+
+<h3>User List here :</h3>
 <div class="wrapper">
-    <div class="user-detail-wapper" *ngfor="let user of UserDetails">
-        <div class="user-detail">Name : {{user.name}} </div>
-        <div class="user-detail" [ngClass]="user.gender == 'femail' ? 'female' : 'male'">Gender : {{user.gender}}</div>
-        <div class="user-detail" >Age : {{user.age}}</div>
+    <div class="user-detail-wrapper" *ngFor="let user of userDetails">  <!-- host Element -->
+        <div class="user-detail">Name: {{user.name}}</div>
+        <div class="user-detail" [ngClass]="user.gender == 'Female' ? 'female' : 'male'">Gender:{{user.gender}}</div>
+        <div class="user-detail" *ngIf="user.age < 23">Age :{{user.age}}</div>
+        <div class="user-detail" >Address :{{user.address}}</div>
     </div>
 </div>
+</body>

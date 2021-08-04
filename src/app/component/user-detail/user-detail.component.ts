@@ -6,26 +6,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-    UserDetails: any = [
-      {
-      name:'archana',
-      age:22
-      }
-    ];
-    name: string = "";
-    age: number = 0;
+  userDetails: any = [
+    {
+      name: 'Archana',
+      age:21,
+      gender : 'female',
+      address : 'pimpalgaon Pisa' 
+    }
+  ];
+  name: string = '';
+  age: number = 0;
+  gender: string = '';
+  address:string = '';
+  constructor() {
+  }
 
-  constructor() { }
 
   ngOnInit(): void {
   }
-  addUserToList(){
-   let user = {
-      name : this.name,
-      age : this.age
-     };
-     this.UserDetails.push(user)
-     this.name = '';
-     this.age = 0;
- }
+
+  addUserToList() {
+    let user = {
+      name: this.name,
+      age: this.age,
+      gender: this.gender,
+      address: this.address 
+    };
+    this.userDetails.push(user)
+    this.name = '';
+    this.age = 0 ;
+    this.gender = '';
+    this.address= '';
+    }
 }
