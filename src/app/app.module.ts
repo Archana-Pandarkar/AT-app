@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ComponentComponent } from './component/component.component';
@@ -17,6 +18,19 @@ import { ProjectComponent } from './routingfun/project/project.component';
 import { RoutingfunComponent } from './routingfun/routingfun.component';
 import { PageNotFoundComponent } from './routingfun/page-not-found/page-not-found.component';
 import { Home1Component } from './routingfun/home1/home1.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Home2Component } from './component/home2/home2.component';
+import { FormExampleComponent } from './form-example/form-example.component';
+
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 @NgModule({
@@ -35,11 +49,25 @@ import { Home1Component } from './routingfun/home1/home1.component';
     ProjectComponent,
     RoutingfunComponent,
     PageNotFoundComponent,
-    Home1Component
+    Home1Component,
+    Home2Component,
+    FormExampleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
+
+    MatInputModule,
+    MatIconModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule,
+
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

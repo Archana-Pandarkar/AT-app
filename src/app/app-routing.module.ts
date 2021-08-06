@@ -7,34 +7,64 @@ import { AboutComponent } from './routingfun/about/about.component';
 import { ContactComponent } from './routingfun/contact/contact.component';
 import { ProjectComponent } from './routingfun/project/project.component';
 import { PageNotFoundComponent } from './routingfun/page-not-found/page-not-found.component';
+import { Home2Component } from './component/home2/home2.component';
+import { CalculatorComponent } from './component/calculator/calculator.component';
+import { CounterComponent } from './component/counter/counter.component';
+import { UserDetailComponent } from './component/user-detail/user-detail.component';
+import { TodoComponent } from './component/todo/todo.component';
 
-
-const routes: Routes=[
-  {
-    path: "",
-    component: Home1Component,
-    pathMatch:'full'
-  },
-  {
-    path: 'app-home',
-    component: HomeComponent
-  },
-  {
-    path:'app-about',
-    component: AboutComponent
-  },
-  {
-    path:'app-contact',
-    component: ContactComponent
-  },
-  {
-    path:'app-project',
-    component: ProjectComponent
-  },
-  {
-   path:'**',
-   component: PageNotFoundComponent
-  }
+const routes: Routes = [
+//   {
+//     path: "",
+//     component: Home1Component,
+//     pathMatch:'full'
+//   },
+//   {
+//     path: 'home',
+//     component: HomeComponent
+//   },
+//   {
+//     path:'about',
+//     component: AboutComponent
+//   },
+//   {
+//     path:'contact',
+//     component: ContactComponent
+//   },
+//   {
+//     path:'project',
+//     component: ProjectComponent
+//   },
+//   {
+//    path:'**',
+//    component: PageNotFoundComponent
+//   }
+// ]
+{
+  path: "",
+  component: Home2Component,
+  pathMatch:'full'
+},
+{
+  path: 'calculator',
+  component: CalculatorComponent
+},
+{
+  path:'counter',
+  component: AboutComponent
+},
+{
+  path:'todo',
+  component: ContactComponent
+},
+{
+  path:'user-detail',
+  component: ProjectComponent
+},
+// {
+//  path:'**',
+//  component: PageNotFoundComponent
+// }
 ]
 
 
