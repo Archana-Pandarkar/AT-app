@@ -21,6 +21,7 @@ import { Home1Component } from './routingfun/home1/home1.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Home2Component } from './component/home2/home2.component';
 import { FormExampleComponent } from './form-example/form-example.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -32,10 +33,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { ParentComponent } from './routingfun/parent/parent.component';
 import { ChildComponent } from './routingfun/child/child.component';
-// import { AngularMaterialComponent } from './angular-material/angular-material.component';
-import { DialogContentComponent } from './angular-material/dialog-content/dialog-content.component';
-import { DialogExampleComponent } from './angular-material/dialog-example/dialog-example.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { DialogExampleComponent } from './angular-model/dialog-example/dialog-example.component';
+import { DialogContentComponent } from './angular-model/dialog-content/dialog-content.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 
 
@@ -60,8 +62,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FormExampleComponent,
     ParentComponent,
     ChildComponent,
-    DialogContentComponent,
     DialogExampleComponent,
+    DialogContentComponent
     
   ],
   imports: [
@@ -80,6 +82,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+
+  
 
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
