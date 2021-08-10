@@ -30,6 +30,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { ParentComponent } from './routingfun/parent/parent.component';
+import { ChildComponent } from './routingfun/child/child.component';
+// import { AngularMaterialComponent } from './angular-material/angular-material.component';
+import { DialogContentComponent } from './angular-material/dialog-content/dialog-content.component';
+import { DialogExampleComponent } from './angular-material/dialog-example/dialog-example.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -51,7 +57,12 @@ import {MatTableModule} from '@angular/material/table';
     PageNotFoundComponent,
     Home1Component,
     Home2Component,
-    FormExampleComponent
+    FormExampleComponent,
+    ParentComponent,
+    ChildComponent,
+    DialogContentComponent,
+    DialogExampleComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -67,7 +78,8 @@ import {MatTableModule} from '@angular/material/table';
 
     MatFormFieldModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
 
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
